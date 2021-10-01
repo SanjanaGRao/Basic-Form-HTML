@@ -129,6 +129,14 @@
             if (emailRegex.test(email.value)) emailError.textContent = "";
             else emailError.textContent = "Please enter a valid Email.";
             };
+            //Mobile Number validation
+            const phError = document.querySelector(".ph-error");
+            tel.oninput = function () 
+            {
+            let phRegex = RegExp("^91 [0-9]{10}$");
+            if (phRegex.test(tel.value)) phError.textContent = "";
+            else phError.textContent = "Please enter a valid mobile number.";
+            };
         </script>
     </form>
 </body>
