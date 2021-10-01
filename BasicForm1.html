@@ -112,7 +112,16 @@
         <div>
             <button>Submit</button>
         </div>
-        
+        <script>
+            //Name Vaidation
+            const textError = document.querySelector(".text-error");
+            text.oninput = function () 
+            {
+            let nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
+            if (nameRegex.test(text.value)) textError.textContent = "";
+            else textError.textContent = "Please enter a valid name.";
+            };
+        </script>
     </form>
 </body>
 </html>
