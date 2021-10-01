@@ -137,6 +137,14 @@
             if (phRegex.test(tel.value)) phError.textContent = "";
             else phError.textContent = "Please enter a valid mobile number.";
             };
+            //Password validation
+            const passwordError = document.querySelector(".pwd-error");
+            pwd.oninput = function () 
+            {
+            let passwdRegex = RegExp("^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$");
+            if (passwdRegex.test(pwd.value)) passwordError.textContent = "";
+            else passwordError.textContent = "Please enter a valid password.";
+            };
         </script>
     </form>
 </body>
